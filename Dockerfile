@@ -21,3 +21,8 @@ RUN apk --no-cache add g++ make &&\
     gem install cf-uaac --no-ri --no-rdoc &&\
     apk del make
     
+### riff CLI ####
+RUN curl -vL https://github.com/projectriff/riff/releases/download/v0.1.1/riff-linux-amd64.tgz | tar zxvf - &&\
+    cp ./riff /usr/local/bin/ &&\
+    rm ./riff
+
